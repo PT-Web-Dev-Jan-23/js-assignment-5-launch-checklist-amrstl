@@ -6,13 +6,13 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
    missionTarget.innerHTML = `
                 <h2>Mission Destination</h2>
                 <ol>
-                    <li>Name: </li>
-                    <li>Diameter: </li>
-                    <li>Star: ${star}</li>
-                    <li>Distance from Earth: </li>
-                    <li>Number of Moons: </li>
+                    <li>Name: ${name} </li>
+                    <li>Diameter: ${diameter} </li>
+                    <li>Star: ${star} </li>
+                    <li>Distance from Earth: ${distance} </li>
+                    <li>Number of Moons: ${moons}</li>
                 </ol>
-                <img src=""> `;
+                <img src="${imageUrl}"> `;
    
 }
 
@@ -80,7 +80,7 @@ async function myFetch() {
 
 function pickPlanet(planets) {
     let planetIndex = Math.floor(Math.random()*planets.length);
-    return planets(planetIndex);
+    return planets[planetIndex];
 }
 
 module.exports.addDestinationInfo = addDestinationInfo;
